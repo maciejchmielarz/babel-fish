@@ -1,0 +1,44 @@
+body {
+	font-family: 'Allerta Stencil', sans-serif;
+}
+
+h1.title {
+	text-align: left;
+	padding-left: 0.2em;
+}
+
+div.app {
+	display: inline-block;
+}
+
+ul.app {
+	list-style: none;
+	padding: 0;
+}
+
+li.app {
+	border: 1px dashed grey;
+	padding: 0.5em;
+	margin: 0.5em;
+}
+
+ul.audio-input {
+	list-style: none;
+	padding: 0;
+	overflow: hidden;
+}
+
+ul.audio-input li {
+	float: left;
+}
+
+li.audio-input {
+	border: 1px dotted grey;
+	padding: 1em;
+	margin: 0.5em;
+}
+
+span#processing {
+	color: red;
+	display: none;
+}
