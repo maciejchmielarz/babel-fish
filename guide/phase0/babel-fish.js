@@ -22,7 +22,7 @@ var recorder;
 var recorderInput;
 var getUserMediaStream;
 var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioContext = new AudioContext;
+var audioContext;
 
 // Get buttons from DOM
 var recordStartButton = document.getElementById('record-start');
@@ -113,13 +113,16 @@ function generateRequestId() {
   var outputLang = document.getElementById('output-lang').value;
   // Generate request id in following format: xx-yy-guid
   // xx - input language, yy - output language, guid - unique identifier
-  return requestId = inputLang + '-' + outputLang + '-' + guid();
+  return requestId = inputLang + '_' + outputLang + '_' + guid();
 }
 
 // Record audio with device microphone
 function startRecording() {
   // Adjust buttons and message for recording
   recordingView();
+
+  // Create AudioContext only after a user gesture https://goo.gl/7K7WLu
+  audioContext = new AudioContext;
 
   // Define constraints object for MediaStream
   var constraints = { audio: true, video: false }

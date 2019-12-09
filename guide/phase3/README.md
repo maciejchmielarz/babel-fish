@@ -1,6 +1,6 @@
 # Build a Babel Fish with Machine Learning Language Services
 
-This repository contains necessary resources for AWS re:Invent 2018 workshop AIM313. In this readme you will find detailed instructions for `Phase 3`.
+This repository contains necessary resources for AWS workshop. In this readme you will find detailed instructions for `Phase 3`.
 
 <img src="../../img/flow3.png" />
 

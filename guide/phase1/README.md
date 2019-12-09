@@ -1,6 +1,6 @@
 # Build a Babel Fish with Machine Learning Language Services
 
-This repository contains necessary resources for AWS re:Invent 2018 workshop AIM313. In this readme you will find detailed instructions for `Phase 1`.
+This repository contains necessary resources for AWS workshop. In this readme you will find detailed instructions for `Phase 1`.
 
 <img src="../../img/flow1.png" />
 
@@ -15,11 +15,11 @@ Use Lambda service in the AWS Console to open `TranscribeLambda` function. In th
 1. Put `.mp3` as suffix.
 1. Click `Add` at the bottom of the page to add trigger.
 1. Click `Save` at the top of the page to confirm changes to the function.
-1. Add a second trigger. Exactly this same as the previous one, but this time, the suffix should be `.wav`.
+1. Add a second trigger. Exactly the same as the previous one, but this time, the suffix should be `.wav`.
 
 Implement the function to use audio file link and transcribe it with Amazon Transcribe.
 
-> Hint: JavaScript app uses a following format to name the files: `xx-yy-guid.ext`, where `xx` is the input language, `yy` is the output language, `guid` is a unique identifier and `ext` is the uploaded audio file extension or `wav` for recordings.
+> Hint: JavaScript app uses a following format to name the files: `xx-XX_yy-YY_guid.ext`, where `xx-XX` is the input language (locale), `yy-YY` is the output language (locale), `guid` is a unique identifier and `ext` is the uploaded audio file extension or `wav` for recordings.
 
 > Hint: Your function should request Amazon Transcribe to put results in project's S3 bucket and use the same file naming convention as Babel Fish JavaScript component.
 
